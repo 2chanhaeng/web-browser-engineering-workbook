@@ -1,0 +1,31 @@
+[project]
+name = "browser-study"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "ipython>=9.6.0",
+    "pillow>=12.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-watch"]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+extend-select = ["E501"]
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.32.1",
+    "fastapi>=0.120.0",
+    "pytest>=8.4.2",
+    "pytest-watch>=4.2.0",
+    "ruff>=0.14.2",
+    "ty>=0.0.1a24",
+    "uvicorn>=0.38.0",
+]
